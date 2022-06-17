@@ -1,0 +1,42 @@
+###
+GET http://localhost:3000/instituicao/1 HTTP/1.1
+
+###
+GET http://localhost:3000/instituicao/1/1000 HTTP/1.1
+
+###
+POST http://localhost:3000/instituicao HTTP/1.1
+Content-Type: application/json
+
+{
+    "razao_social": "ZZZZZZZZ razao_social",
+    "cnpj": "cnpj",
+    "endereco_logradouro": "endereco_logradouro",
+    "endereco_numero": "22",
+    "endereco_complemento": "endereco_complemento",
+    "endereco_cep": "000",
+    "endereco_cidade": "endereco_cidade",
+    "endereco_estado": "EE",
+    "endereco_bairro": "endereco_bairro",
+    "email": "email"
+}
+
+###
+PUT http://localhost:3000/instituicao/8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "razao_social": "razao_social XXXXXXXXXX",
+    "cnpj": "cnpj",
+    "endereco_logradouro": "endereco_logradouro",
+    "endereco_numero": "22",
+    "endereco_complemento": "endereco_complemento",
+    "endereco_cep": "000",
+    "endereco_cidade": "endereco_cidade",
+    "endereco_estado": "EE",
+    "endereco_bairro": "endereco_bairro",
+    "email": "email"
+}
+
+###
+DELETE http://localhost:3000/instituicao/7 HTTP/1.1

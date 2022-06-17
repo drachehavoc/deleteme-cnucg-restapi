@@ -1,0 +1,59 @@
+###
+GET http://localhost:3000/usuario/1 HTTP/1.1
+
+###
+GET http://localhost:3000/usuario/1/100 HTTP/1.1
+
+###
+POST http://localhost:3000/usuario HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Daniel Varela",
+    "cpf": "000000000",
+    "sexo": "masc",
+    "data_nascimento": "1986-07-07", 
+    "endereco_logradouro": "rua zzzzzz",
+    "endereco_numero": "s/n",
+    "endereco_complemento": "nnn",
+    "endereco_cep": "87555555",
+    "endereco_cidade": "Zimbralama",
+    "endereco_estado": "ZM",
+    "endereco_bairro": "Kalimba",
+    "email": "caldodecode@gmail.com",
+    "senha": "123ejá",
+    "rg": "NONONONOO",
+    "telefone": "44955555555",
+    "id_instituicao": 1
+}
+
+###
+PUT http://localhost:3000/usuario/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Daniel Varela UP",
+    "cpf": "000000000",
+    "sexo": "masc",
+    "data_nascimento": "1986-07-07", 
+    "endereco_logradouro": "rua zzzzzz",
+    "endereco_numero": "s/n",
+    "endereco_complemento": "nnn",
+    "endereco_cep": "87555555",
+    "endereco_cidade": "Zimbralama",
+    "endereco_estado": "ZM",
+    "endereco_bairro": "Kalimba",
+    "email": "caldodecode@gmail.com",
+    "rg": "NONONONOO",
+    "telefone": "44955555555",
+    "id_instituicao": 2
+}
+
+###
+PUT http://localhost:3000/usuario/senha/1 HTTP/1.1
+Content-Type: application/json
+
+{ "senha": "alter pass" }
+
+###
+DELETE http://localhost:3000/usuario/1 HTTP/1.1
