@@ -12,7 +12,7 @@ CREATE TABLE usuarios (
     id                      INT                                 NOT NULL   AUTO_INCREMENT   ,
     nome                    VARCHAR(40)                         NOT NULL                    ,
     cpf                     VARCHAR(11)                         NOT NULL                    ,
-    sexo                    ENUM('masc', 'fem', 'não binário')                              ,
+    sexo                    ENUM('masc', 'fem', 'nao-bin')                                  ,
     data_nascimento         DATE                                NOT NULL                    ,
     endereco_logradouro     VARCHAR(50)                         NOT NULL                    ,
     endereco_numero         VARCHAR(10)                                                     ,
@@ -52,7 +52,7 @@ CREATE TABLE instituicoes (
 -- --------------------------------------------------------------------------------------- --
 CREATE TABLE caes_guia (
     id                      INT                                 NOT NULL   AUTO_INCREMENT   ,
-    sexo                    ENUM('masc', 'fem', 'não binário')                              ,
+    sexo                    ENUM('masc', 'fem', 'nao-bin')                                  ,
     cor                     VARCHAR(15)                         NOT NULL                    ,
     nome                    VARCHAR(25)                         NOT NULL                    ,
     data_nascimento         DATE                                NOT NULL                    ,
