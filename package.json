@@ -8,9 +8,10 @@
   },
   "scripts": {
     "mysql:start": "mysqld --datadir=./mysql_database --console",
-    "mysql:create:datadir": "mysql_install_db --datadir=./mysql_database", 
-    "mysql:create": "mysql --user=root < database.sql", 
-    "dev": "ts-node-script src/index.ts",
+    "mysql:create:datadir": "mysql_install_db --datadir=./mysql_database",
+    "mysql:create": "mysql --user=root < database.sql",
+    "ts-node": "ts-node-script src/index.ts",
+    "dev": "concurrently -c -n MySQL,TS-NODE npm:mysql:start npm:ts-node",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,6 +28,7 @@
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.43",
+    "concurrently": "^7.2.2",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
   }
